@@ -15,8 +15,8 @@ import { SharedModule } from './shared/shared.module';
   entryComponents: [],
   imports: [
     BrowserModule, 
-    IonicModule.forRoot(), 
-    AppRoutingModule, 
+    IonicModule.forRoot(),
+    AppRoutingModule,
     SharedModule
   ],
   providers: [

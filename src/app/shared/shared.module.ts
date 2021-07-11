@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
+import { ListMerchantsComponent } from './components/list-merchants/list-merchants.component';
 
 const SHARED_EXPORTS = [
-    HeaderComponent
+    HeaderComponent,
+    ListMerchantsComponent
 ];
 
 @NgModule({
