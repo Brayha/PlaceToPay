@@ -24,3 +24,12 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import './font-poppins.css';
+
+ion-content {
+    background-color: var(--ion-color-light) !important;
+}
+
+.ion-page {
+    background-color: var(--ion-color-light) !important;
+}
