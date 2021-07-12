@@ -4,23 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FolderPageRoutingModule } from './folder-routing.module';
+import { MerchantsPageRoutingModule } from './merchants-routing.module';
 
-import { FolderPage } from './folder.page';
+import { MerchantsPage } from './merchants.page';
 import { SharedModule } from '../shared/shared.module';
-import { MerchantsPage } from '../merchants/merchants.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FolderPageRoutingModule,
-    SharedModule
+    SharedModule,
+    MerchantsPageRoutingModule
   ],
-  declarations: [
-    FolderPage,
-    MerchantsPage
-  ]
+  declarations: [MerchantsPage]
 })
-export class FolderPageModule {}
+export class MerchantsPageModule {}

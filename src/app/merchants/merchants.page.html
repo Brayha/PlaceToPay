@@ -1,0 +1,16 @@
+<ion-header [translucent]="true" mode="ios" class="header-style">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <section class="container">
+    <!--lista de comercios-->
+    <app-list-merchants [merchants]="dataMerchants"></app-list-merchants>
+  </section>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
