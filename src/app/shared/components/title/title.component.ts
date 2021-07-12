@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { titleInterface } from '../../interfaces/title.interface';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 //new merchants
 import { ModalController } from '@ionic/angular';
@@ -14,7 +16,12 @@ import { NewMerchantPage } from '../../../new-merchant/new-merchant.page';
 export class TitleComponent implements OnInit {
   @Input() data: titleInterface;
 
-  constructor(public modalController: ModalController, public alertController: AlertController) { }
+  constructor(
+    private router: Router,
+    public modalController: ModalController,
+    public alertController: AlertController,
+    public toastController: ToastController
+  ) { }
 
   ngOnInit() {
   }
@@ -46,12 +53,25 @@ export class TitleComponent implements OnInit {
           text: 'Okay',
           handler: () => {
             console.log('Confirm Okay');
+            this.router.navigateByUrl("/merchants");
+            this.presentToast();
           }
         }
       ]
     });
 
     await alert.present();
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Merchant removed',
+      duration: 2000,
+      mode: 'ios',
+      color: 'warning',
+      cssClass: 'toast-alert',
+    });
+    toast.present();
   }
 
 }

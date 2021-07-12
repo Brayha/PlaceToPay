@@ -20,7 +20,8 @@ export class DataDetailComponent implements OnInit {
       message: 'Item copiado',
       duration: 2000,
       mode:"ios",
-      color: 'success'
+      color: 'success',
+      cssClass: 'toast-alert',
     });
     toast.present();
   }

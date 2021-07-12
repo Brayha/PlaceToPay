@@ -74,13 +74,20 @@ ion-content {
 .sc-ion-modal-ios-h { 
     --height: 100% !important;
 }
+
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background-color: var(--ion-color-primary) !important;
 }
+
 .modal-wrapper.sc-ion-modal-ios, .modal-shadow.sc-ion-modal-ios {
   background-color: transparent !important;
 }
+
 .container {
   width: 100%;
   padding: 0 2.5% 2.5% 2.5%;
+}
+
+.toast-alert {
+  font-weight: 600;
 }
