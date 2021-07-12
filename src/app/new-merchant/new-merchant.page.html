@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>new-merchant</ion-title>
+    <ion-title>New merchant</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <app-basic-one class="style-component"></app-basic-one>
+    </ion-slide>
+    <ion-slide>
+      <app-basic-two class="style-component"></app-basic-two>
+    </ion-slide>
+    <ion-slide>
+      <app-operation class="style-component"></app-operation>
+    </ion-slide>
+    <ion-slide>
+      <app-commercial class="style-component"></app-commercial>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

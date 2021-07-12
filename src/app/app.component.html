@@ -3,12 +3,12 @@
     <ion-menu contentId="main-content" type="reveal" class="menu-style" mode="ios">
       <ion-content>
         <ion-list id="inbox-list" class="list-menu">
-          <ion-list-header>
-            <img src="./assets/logo/logo-placeToPay.png" alt="PlaceToPay" class="logo">
+          <ion-list-header class="ion-margin-bottom">
+            <img src="./assets/logo/logo-placeToPay.png" alt="PlaceToPay" class="logo-menu">
           </ion-list-header>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-icon slot="start" [name]="p.icon + '-outline'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>

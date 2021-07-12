@@ -8,10 +8,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
     path: 'new-merchant',
     loadChildren: () => import('./new-merchant/new-merchant.module').then( m => m.NewMerchantPageModule)
   },

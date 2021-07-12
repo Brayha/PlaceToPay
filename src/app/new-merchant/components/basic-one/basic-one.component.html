@@ -1,0 +1,37 @@
+<div class="contain-new-merchant">
+  <h2>Basic information</h2>
+  <p>Information that identifiles the merchant as a legal entity.</p>
+
+  <ion-list mode="ios" class="ion-padding-vertical">
+    <ion-item lines="none" mode="ios" class="style-input ion-margin-bottom">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" mode="ios" class="style-input ion-margin-bottom">
+      <ion-label position="floating">Brand <span>(Opcional)</span></ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" mode="ios" class="style-input ion-margin-bottom">
+      <ion-label position="floating">Website Url</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none" mode="ios" class="style-select ion-margin-bottom">
+      <ion-label position="floating">Country</ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Cancel">
+        <ion-select-option value="col">Colombia</ion-select-option>
+        <ion-select-option value="eu">Estados Unidos</ion-select-option>
+        <ion-select-option value="bra">Brazil</ion-select-option>
+        <ion-select-option value="ita">Italia</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none" mode="ios" class="ion-no-padding">
+      <ion-fab-button slot="end" class="ion-margin-vertical">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-item>
+  </ion-list>
+</div>

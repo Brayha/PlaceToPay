@@ -131,11 +131,12 @@ ion-item.selected {
     max-width: 50%;
   }
 
-  .logo {
+  .logo-menu {
     width: auto;
     height: 25px;
     margin: auto 0;
     transition: 0.3s;
+    display: block;
     object-fit: cover;
     object-position: 5px 10%;
 
@@ -149,9 +150,16 @@ ion-item.selected {
   }
 
   &:hover {
-    min-width: 10%;
+    min-width: 13%;
     transition: 0.3s;
 
+    @media screen and (max-width: 1800px) {
+      min-width: 13%;
+    }
+
+    @media screen and (max-width: 1500px) {
+      min-width: 20%;
+    }
 
     ion-menu.ios ion-item {
       --padding-end: 16px !important;
@@ -170,15 +178,7 @@ ion-item.selected {
       -o-transition: all .3s ease-in-out;
     }
 
-    @media screen and (max-width: 1800px) {
-      min-width: 10%;
-    }
-
-    @media screen and (max-width: 1500px) {
-      min-width: 14%;
-    }
-
-    .logo {
+    .logo-menu {
       margin: auto 5px;
       transition: 0.3s;
       object-position: 0;

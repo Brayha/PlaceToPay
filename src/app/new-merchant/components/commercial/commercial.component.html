@@ -1,0 +1,33 @@
+<div class="contain-new-merchant">
+  <h2>Commercial information</h2>
+  <p>Consultant and business ally information.</p>
+
+  <ion-list mode="ios" class="ion-padding-vertical">
+    <ion-item lines="none" mode="ios" class="style-select">
+      <ion-label position="floating">Seller <span>(Opcional)</span></ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Cancel">
+        <ion-select-option value="one">Option 1</ion-select-option>
+        <ion-select-option value="two">Option 2</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <p class="aler-info">If the seller doesn't exist, you must create a new one</p>
+
+    <ion-item lines="none" mode="ios" class="style-select">
+      <ion-label position="floating">Ally <span>(Opcional)</span></ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Cancel">
+        <ion-select-option value="one">Option 1</ion-select-option>
+        <ion-select-option value="two">Option 2</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <p class="aler-info">If the ally doesn't exist, you must create a new one</p>
+
+    <ion-item lines="none" mode="ios">
+      <ion-fab-button slot="start" class="ion-margin-vertical" color="white">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-fab-button>
+      
+      <ion-button expand="block" slot="end" color="primary" fill="outline" size="large">Guardar y crear otro</ion-button>
+      <ion-button expand="block" slot="end" color="primary" size="large">Guardar</ion-button>
+    </ion-item>
+  </ion-list>
+</div>

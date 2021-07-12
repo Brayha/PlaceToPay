@@ -1,0 +1,25 @@
+.contain-new-merchant {
+    width: 100%;
+    height: auto;
+    padding: 5% 5% 0;
+
+    h2 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 5px;
+        font-size: medium;
+        color: var(--ion-color-dark);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    p {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        font-size: small;
+        color: var(--ion-color-dark);
+        font-weight: 400;
+        text-align: center;
+    }
+}
