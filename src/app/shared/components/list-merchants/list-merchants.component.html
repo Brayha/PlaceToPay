@@ -1,22 +1,47 @@
-<ion-list class="list-syle">
-  <ion-item lines="full">
-    <ion-avatar slot="start">
-      <img src="./assets/avatar.svg">
-    </ion-avatar>
-    <ion-label>
-      <h2>Nombre del comercio</h2>
-    </ion-label>
-    <ion-label>
-      <h2>Vendedor</h2>
-    </ion-label>
-    <ion-label>
-      <img src="./assets/country/colombia.png" alt="PlaceToPay" class="imgCountry">
-    </ion-label>
-    <ion-label>
-      <h2>status</h2>
-    </ion-label>
-    <ion-label>
-      <h2>Detalle</h2>
-    </ion-label>
-  </ion-item>
-</ion-list>
+<section class="table-merchants">
+  <table>
+    <!--header table-->
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Seller</th>
+      <th>Status</th>
+    </tr>
+    <!--detail table-->
+    <tr [ngClass]="merchant.lineClass" *ngFor="let merchant of merchants" (click)="detailMerchant()">
+      <!--Nombre del comercio-->
+      <td>
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-avatar slot="start">
+            <img [src]="merchant.imgMerchant">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{merchant.nameMerchant}}</h2>
+          </ion-label>
+        </ion-item>
+      </td>
+      <!--Pais-->
+      <td>
+        <ion-chip color="dark">
+          <ion-avatar>
+            <img [src]="merchant.imgCountry">
+          </ion-avatar>
+          <ion-label class="nameCountryStyle">{{merchant.nameCountry}}</ion-label>
+        </ion-chip>
+      </td>
+      <!--Vendedor-->
+      <td>{{merchant.nameSeller}}</td>
+      <!--Estado-->
+      <td>
+        <ion-chip [color]="merchant.colorStatus">
+          <ion-label>{{merchant.status}}</ion-label>
+        </ion-chip>
+      </td>
+    </tr>
+  </table>
+
+  <div class="load-merchants-style">
+    <ion-spinner name="crescent" color="dark"></ion-spinner>
+    <p>searching more merchants</p>
+  </div>
+</section>

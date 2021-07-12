@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { listMerchantsInterface } from '../../interfaces/list.merchants.interface';
 
 @Component({
   selector: 'app-list-merchants',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-merchants.component.scss']
 })
 export class ListMerchantsComponent implements OnInit {
+  @Input() merchants: listMerchantsInterface[];
 
-  constructor() { }
+  constructor(
+		public router: Router
+    ) { }
 
   ngOnInit() {
   }
+
+	async detailMerchant() {
+		this.router.navigateByUrl("/");
+	}
 
 }
