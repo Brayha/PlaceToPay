@@ -4,10 +4,14 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { ListMerchantsComponent } from './components/list-merchants/list-merchants.component';
+import { BreadcumbsComponent } from './components/breadcumbs/breadcumbs.component';
+import { TitleComponent } from './components/title/title.component';
 
 const SHARED_EXPORTS = [
     HeaderComponent,
-    ListMerchantsComponent
+    ListMerchantsComponent,
+    BreadcumbsComponent,
+    TitleComponent
 ];
 
 @NgModule({

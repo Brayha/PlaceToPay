@@ -4,13 +4,11 @@
 
 <ion-content [fullscreen]="true" color="light">
   <section class="container">
+    <!--breadcums-->
+    <app-breadcumbs [breadcums]="breadcumsMerchants"></app-breadcumbs>
+    <!--title-->
+    <app-title [data]="title"></app-title>
     <!--lista de comercios-->
     <app-list-merchants [merchants]="dataMerchants"></app-list-merchants>
   </section>
-
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="newMerchant()">
-      <ion-icon name="add-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>

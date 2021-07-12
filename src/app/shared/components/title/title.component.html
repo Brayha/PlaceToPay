@@ -1,0 +1,14 @@
+<ion-item class="title-style ion-padding-bottom" mode="ios" lines="none">
+  <ion-avatar slot="start" *ngIf="data.imgMerchant">
+    <img [src]="data.imgMerchant">
+  </ion-avatar>
+  <ion-label>
+    <h1>{{data.title}}</h1>
+  </ion-label>
+  <ion-button expand="block" slot="end" mode="ios" fill="outline" color="primary" size="large" (click)="newMerchant()" *ngIf="data.edit">
+    <span>{{data.edit}}</span>
+  </ion-button>
+  <ion-button expand="block" slot="end" mode="ios" color="primary" size="large" (click)="newMerchant()">
+    <span>{{data.btn}}</span>
+  </ion-button>
+</ion-item>

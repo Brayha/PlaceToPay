@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-new-merchant',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-merchant.page.scss'],
 })
 export class NewMerchantPage implements OnInit {
+	@ViewChild(IonSlides, { static: false }) slides: IonSlides;
+  
   public slideOpts = {
     speed: 400,
     pagination: {
@@ -17,6 +20,14 @@ export class NewMerchantPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  next() {
+    this.slides.slideNext();
+  }
+
+  swipePrev() {
+    this.slides.slidePrev();
   }
 
 }

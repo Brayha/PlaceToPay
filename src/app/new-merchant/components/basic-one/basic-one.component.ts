@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-basic-one',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic-one.component.scss']
 })
 export class BasicOneComponent implements OnInit {
+  @Output() clickBtn: EventEmitter<void> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  goNextSlider() {
+    this.clickBtn.emit();
   }
 
 }

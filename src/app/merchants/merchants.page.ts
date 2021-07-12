@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-//new merchants
-import { ModalController } from '@ionic/angular';
-import { NewMerchantPage } from '../new-merchant/new-merchant.page';
+//title
+import { titleInterface } from '../shared/interfaces/title.interface';
+import { TITLE_MERCHANTS } from '../merchants/constants/title-merchants';
+
+//Breadcums
+import { breadcumbsInterface } from '../shared/interfaces/breadcumbs.interface';
+import { BREADCUMBS_MERCHANTS } from '../merchants/constants/breadcumbs-merchants';
 
 //list merchants
 import { listMerchantsInterface } from '../shared/interfaces/list.merchants.interface';
@@ -14,20 +18,13 @@ import { MERCHANTS } from '../merchants/constants/list-merchants';
   styleUrls: ['./merchants.page.scss'],
 })
 export class MerchantsPage implements OnInit {
+  public breadcumsMerchants: breadcumbsInterface[] = BREADCUMBS_MERCHANTS;
+  public title: titleInterface = TITLE_MERCHANTS;
   public dataMerchants: listMerchantsInterface[] = MERCHANTS;
 
-  constructor(public modalController: ModalController) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  async newMerchant() {
-    const modal = await this.modalController.create({
-      component: NewMerchantPage,
-      cssClass: 'new-modal-height',
-      mode: "ios"
-    });
-    return await modal.present();
   }
 
 }

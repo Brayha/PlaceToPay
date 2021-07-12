@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>detail-merchant</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" mode="ios" class="header-style">
+  <app-header></app-header>
 </ion-header>
 
-<ion-content>
-
+<ion-content [fullscreen]="true" color="light">
+  <section class="container">
+    <!--breadcums-->
+    <app-breadcumbs [breadcums]="breadcumsMerchants"></app-breadcumbs>
+    <!--title-->
+    <app-title [data]="title"></app-title>
+  </section>
 </ion-content>
