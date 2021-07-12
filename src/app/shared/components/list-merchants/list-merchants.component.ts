@@ -18,7 +18,7 @@ export class ListMerchantsComponent implements OnInit {
   }
 
 	async detailMerchant() {
-		this.router.navigateByUrl("/");
+		this.router.navigateByUrl("/detail-merchant");
 	}
 
 }

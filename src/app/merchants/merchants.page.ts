@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+//header
+import { menuInterface } from '../shared/interfaces/menus.interface';
+import { MENU } from '../merchants/constants/menu';
+
 //title
 import { titleInterface } from '../shared/interfaces/title.interface';
 import { TITLE_MERCHANTS } from '../merchants/constants/title-merchants';
@@ -18,6 +22,7 @@ import { MERCHANTS } from '../merchants/constants/list-merchants';
   styleUrls: ['./merchants.page.scss'],
 })
 export class MerchantsPage implements OnInit {
+  public menu: menuInterface = MENU;
   public breadcumsMerchants: breadcumbsInterface[] = BREADCUMBS_MERCHANTS;
   public title: titleInterface = TITLE_MERCHANTS;
   public dataMerchants: listMerchantsInterface[] = MERCHANTS;

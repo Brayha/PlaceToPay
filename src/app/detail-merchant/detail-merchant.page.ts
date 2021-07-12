@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+//header
+import { menuInterface } from '../shared/interfaces/menus.interface';
+import { MENU } from '../detail-merchant/constants/menu';
+
 //title
 import { titleInterface } from '../shared/interfaces/title.interface';
-import { TITLE_MERCHANTS } from '../detail-merchant/constants/title-merchants';
+import { TITLE_MERCHANTS, TITLE_CREDIT} from '../detail-merchant/constants/title-merchants';
 
 //Breadcums
 import { breadcumbsInterface } from '../shared/interfaces/breadcumbs.interface';
@@ -18,10 +22,12 @@ import { DATA } from './constants/datail-data';
   styleUrls: ['./detail-merchant.page.scss'],
 })
 export class DetailMerchantPage implements OnInit {
+  public menu: menuInterface = MENU;
   public breadcumsMerchants: breadcumbsInterface[] = BREADCUMBS_MERCHANTS;
   public title: titleInterface = TITLE_MERCHANTS;
   public detailSegment: string;
   public info: dataDetailInterface[] = DATA;
+  public titleCredit: titleInterface = TITLE_CREDIT;
 
   constructor() { }
 

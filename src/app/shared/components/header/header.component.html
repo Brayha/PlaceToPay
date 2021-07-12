@@ -1,12 +1,17 @@
 <ion-toolbar color="light">
   <!--busqueda-->
-  <ion-searchbar color="light" class="ion-margin-top" placeholder="Buscar"></ion-searchbar>
+  <ion-searchbar color="light" class="ion-margin-top" [placeholder]="menu.placeholder" *ngIf="menu.placeholder"></ion-searchbar>
   <!--filtro-->
+  <ion-button expand="block" mode="ios" slot="end" color="light" size="large" class="ion-margin-horizontal" *ngIf="menu.filters">
+    <ion-icon [name]="menu.filters + '-outline'"></ion-icon>
+  </ion-button>
+  <!--notifications-->
   <ion-button expand="block" mode="ios" slot="end" color="light" size="large" class="ion-margin-horizontal">
-    <ion-icon name="options-outline"></ion-icon>
+    <ion-icon name="notifications-outline"></ion-icon>
+    <ion-badge color="success">2</ion-badge>
   </ion-button>
   <!--avatar-->
   <ion-avatar slot="end" class="style-avatar">
-    <img src="./assets/avatar.svg">
+    <img [src]="menu.avatar">
   </ion-avatar>
 </ion-toolbar>

@@ -39,7 +39,47 @@
 .detail-style {
   background-color: white;
   width: 100%;
-  padding: 2%;
   border-radius: 12px;
   box-shadow: 0 8px 30px -5px rgb(0 0 0 / 5%);
+}
+
+
+.table-merchants {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 12px;
+  background-color: white;
+  height: auto;
+
+  table {
+    width: 100%;
+
+    tr {
+
+      &:hover {
+
+        td {
+          color: var(--ion-color-primary) !important;
+          transition: 0.3s;
+        }
+      }
+
+      th {
+        padding: 10px 20px;
+        text-align: left;
+        color: lightsteelblue;
+        font-size: small;
+        font-weight: 600;
+      }
+
+      td {
+        padding: 20px 20px;
+        font-size: medium;
+        font-weight: 400;
+        transition: 0.3s;
+        color: var(--ion-color-dark);
+        cursor: pointer;
+      }
+    }
+  }
 }

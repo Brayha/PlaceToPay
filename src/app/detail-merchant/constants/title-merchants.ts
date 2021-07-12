@@ -7,3 +7,8 @@ export const TITLE_MERCHANTS: titleInterface = {
     edit: 'Edit',
     delet: 'trash'
 };
+
+export const TITLE_CREDIT: titleInterface = {
+    title: 'Payment methods',
+    attach: 'attach'
+};

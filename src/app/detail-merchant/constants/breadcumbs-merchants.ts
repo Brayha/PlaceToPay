@@ -11,6 +11,6 @@ export const BREADCUMBS_MERCHANTS: breadcumbsInterface[] = [
     },
     {
         color: 'primary',
-        page: 'Workers Colombia SAS'
+        page: 'Puma Colombia SAS'
     }
 ];

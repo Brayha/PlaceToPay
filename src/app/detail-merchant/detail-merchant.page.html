@@ -1,5 +1,5 @@
-<ion-header [translucent]="true" mode="ios" class="header-style">
-  <app-header></app-header>
+<ion-header [translucent]="false" mode="ios" class="header-style">
+  <app-header [menu]="menu"></app-header>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light">
@@ -30,17 +30,67 @@
       </ion-segment-button>
     </ion-segment>
 
-    <div [ngSwitch]="detailSegment">
+    <div [ngSwitch]="detailSegment" class="ion-margin-bottom">
       <section *ngSwitchCase="'detail'">
-          <div class="detail-style ion-margin-vertical">
-              <ion-row>
-                  <ion-col size="4" *ngFor="let item of info">
-                      <app-data-detail [dataDetail]="item"></app-data-detail>
-                  </ion-col>
-              </ion-row>
-          </div>
+        <div class="detail-style ion-margin-vertical">
+          <ion-row>
+            <ion-col size="4" *ngFor="let item of info">
+              <app-data-detail [dataDetail]="item"></app-data-detail>
+            </ion-col>
+          </ion-row>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'branches'">
+        <div class="detail-style ion-margin-vertical">
+          <h4>Branches</h4>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'sities'">
+        <div class="detail-style ion-margin-vertical">
+          <h4>Sities</h4>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'contacs'">
+        <div class="detail-style ion-margin-vertical">
+          <h4>Contacts</h4>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'attachments'">
+        <div class="detail-style ion-margin-vertical">
+          <h4>Attachment</h4>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'security'">
+        <div class="detail-style ion-margin-vertical">
+          <h4>Security</h4>
+        </div>
       </section>
     </div>
-
+    <!--title-->
+    <app-title [data]="titleCredit"></app-title>
+    <!--Metodos de pago-->
+    <div class="detail-style ion-margin-vertical">
+      <div class="table-merchants">
+        <table>
+          <!--header table-->
+          <tr>
+            <th>Payment method</th>
+            <th>Processor</th>
+            <th>Acquirer banck</th>
+            <th>Priority</th>
+            <th>Status</th>
+          </tr>
+          <!--detail table-->
+          <tr>
+            <td>There are no payments methods</td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </section>
 </ion-content>
