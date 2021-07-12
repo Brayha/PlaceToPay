@@ -1,0 +1,35 @@
+.contain-data {
+  background-color: white;
+  --backgound: white;
+  cursor: pointer;
+
+  h6 {
+    color: var(--ion-color-dark);
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    font-size: small;
+    margin: 0;
+  }
+
+  p {
+    color: var(--ion-color-dark);
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+    font-size: large;
+    margin-top: 5px;
+  }
+
+  ion-icon {
+      opacity: 0;
+      transition: 0.3s;
+  }
+
+  &:hover {
+    ion-icon {
+        opacity: 1;
+        transition: 0.3s;
+    }
+  }
+}

@@ -6,12 +6,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { ListMerchantsComponent } from './components/list-merchants/list-merchants.component';
 import { BreadcumbsComponent } from './components/breadcumbs/breadcumbs.component';
 import { TitleComponent } from './components/title/title.component';
+import { DataDetailComponent } from './components/data-detail/data-detail.component';
 
 const SHARED_EXPORTS = [
     HeaderComponent,
     ListMerchantsComponent,
     BreadcumbsComponent,
-    TitleComponent
+    TitleComponent,
+    DataDetailComponent
 ];
 
 @NgModule({

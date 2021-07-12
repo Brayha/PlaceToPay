@@ -6,7 +6,11 @@ import { TITLE_MERCHANTS } from '../detail-merchant/constants/title-merchants';
 
 //Breadcums
 import { breadcumbsInterface } from '../shared/interfaces/breadcumbs.interface';
-import { BREADCUMBS_MERCHANTS } from '../detail-merchant/constants/breadcumbs-merchants';
+import { BREADCUMBS_MERCHANTS } from './constants/breadcumbs-merchants';
+
+//Data
+import { dataDetailInterface } from '../shared/interfaces/data.detail.interface';
+import { DATA } from './constants/datail-data';
 
 @Component({
   selector: 'app-detail-merchant',
@@ -16,10 +20,15 @@ import { BREADCUMBS_MERCHANTS } from '../detail-merchant/constants/breadcumbs-me
 export class DetailMerchantPage implements OnInit {
   public breadcumsMerchants: breadcumbsInterface[] = BREADCUMBS_MERCHANTS;
   public title: titleInterface = TITLE_MERCHANTS;
+  public detailSegment: string;
+  public info: dataDetailInterface[] = DATA;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+	ionViewWillEnter() {
+    this.detailSegment = 'detail';
+	}
 }

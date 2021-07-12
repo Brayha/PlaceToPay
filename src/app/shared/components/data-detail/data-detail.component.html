@@ -1,0 +1,16 @@
+<ion-item class="contain-data" mode="ios" lines="none">
+  <ion-label>
+    <h6>{{dataDetail.title}}</h6>
+    <p>{{dataDetail.description}}</p>
+    <ion-chip color="dark" *ngIf="dataDetail.nameCountry">
+      <ion-avatar>
+        <img [src]="dataDetail.imgCountry">
+      </ion-avatar>
+      <ion-label>{{dataDetail.nameCountry}}</ion-label>
+    </ion-chip>
+    <ion-chip color="success" *ngIf="dataDetail.status">
+      <ion-label>{{dataDetail.status}}</ion-label>
+    </ion-chip>
+  </ion-label>
+  <ion-icon name="copy-outline" slot="end" (click)="presentToast()" *ngIf="dataDetail.description"></ion-icon>
+</ion-item>

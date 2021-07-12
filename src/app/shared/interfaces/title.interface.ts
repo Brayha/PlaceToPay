@@ -3,4 +3,5 @@ export interface titleInterface {
     title: string,
     btn: string,
     edit?: string,
+    delet?: string,
 }

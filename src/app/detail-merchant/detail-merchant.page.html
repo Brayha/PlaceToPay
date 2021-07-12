@@ -8,5 +8,39 @@
     <app-breadcumbs [breadcums]="breadcumsMerchants"></app-breadcumbs>
     <!--title-->
     <app-title [data]="title"></app-title>
+    <!--info-->
+    <ion-segment value="detail" mode="ios" [(ngModel)]="detailSegment" class="segment-style">
+      <ion-segment-button value="detail" class="segment-button-style">
+        <ion-label class="label-style">Merchant detail</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="branches" class="segment-button-style">
+        <ion-label class="label-style">Branches</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="sities" class="segment-button-style">
+        <ion-label class="label-style">Sities</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="contacs" class="segment-button-style">
+        <ion-label class="label-style">Contacts</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="attachments" class="segment-button-style">
+        <ion-label class="label-style">Attachments</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="security" class="segment-button-style">
+        <ion-label class="label-style">Security</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="detailSegment">
+      <section *ngSwitchCase="'detail'">
+          <div class="detail-style ion-margin-vertical">
+              <ion-row>
+                  <ion-col size="4" *ngFor="let item of info">
+                      <app-data-detail [dataDetail]="item"></app-data-detail>
+                  </ion-col>
+              </ion-row>
+          </div>
+      </section>
+    </div>
+
   </section>
 </ion-content>
