@@ -36,11 +36,11 @@
     </ion-item>
 
     <ion-item lines="none" mode="ios">
-      <ion-fab-button slot="start" class="ion-margin-vertical" color="white">
+      <ion-fab-button slot="start" class="ion-margin-vertical" color="white" (click)="onClickBtnPrev()">
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-fab-button>
       
-      <ion-fab-button slot="end" class="ion-margin-vertical">
+      <ion-fab-button slot="end" class="ion-margin-vertical" (click)="onClickBtnNext()">
         <ion-icon name="arrow-forward-outline"></ion-icon>
       </ion-fab-button>
     </ion-item>

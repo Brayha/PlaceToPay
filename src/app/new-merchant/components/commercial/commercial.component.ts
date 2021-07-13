@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
@@ -9,6 +9,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./commercial.component.scss']
 })
 export class CommercialComponent implements OnInit {
+  @Output() clickBtnPrev: EventEmitter<void> = new EventEmitter();
 
   constructor(
     private router: Router,
@@ -34,6 +35,11 @@ export class CommercialComponent implements OnInit {
     this.router.navigateByUrl("/detail-merchant");
     await this.modalController.dismiss();
     this.alert();
+  }
+
+
+  onClickBtnPrev() {
+    this.clickBtnPrev.emit();
   }
 
 }

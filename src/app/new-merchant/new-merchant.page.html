@@ -1,18 +1,18 @@
 <ion-content>
   <div class="style-new-merchant">
     <div class="center-new-merchant">
-      <ion-slides pager="true" [options]="slideOpts">
+      <ion-slides pager="true" [options]="slideOpts" class="swiper-no-swiping">
         <ion-slide>
-          <app-basic-one class="style-component" (clickBtn)="next()"></app-basic-one>
+          <app-basic-one class="style-component" (clickBtn)="swipeNext()"></app-basic-one>
         </ion-slide>
         <ion-slide>
-          <app-basic-two class="style-component"></app-basic-two>
+          <app-basic-two class="style-component" (clickBtnPrev)="swipePrev()" (clickBtnNext)="swipeNext()"></app-basic-two>
         </ion-slide>
         <ion-slide>
-          <app-operation class="style-component"></app-operation>
+          <app-operation class="style-component" (clickBtnPrev)="swipePrev()" (clickBtnNext)="swipeNext()"></app-operation>
         </ion-slide>
         <ion-slide>
-          <app-commercial class="style-component"></app-commercial>
+          <app-commercial class="style-component" (clickBtnPrev)="swipePrev()"></app-commercial>
         </ion-slide>
       </ion-slides>
     </div>

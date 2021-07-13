@@ -22,7 +22,7 @@ export class NewMerchantPage implements OnInit {
   ngOnInit() {
   }
 
-  next() {
+  swipeNext() {
     this.slides.slideNext();
   }
 
