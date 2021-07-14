@@ -37,7 +37,7 @@
 }
 
 .detail-style-info {
-  background-color: white;
+  background-color: var(--ion-color-background);
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 30px 5px rgb(0 0 0 / 5%);
@@ -46,7 +46,7 @@
 
 
 .detail-style {
-  background-color: white;
+  background-color: var(--ion-color-background);
   width: 100%;
   border-radius: 12px;
   padding: 2%;
@@ -58,7 +58,7 @@
   border-collapse: collapse;
   width: 100%;
   border-radius: 12px;
-  background-color: white;
+  background-color: var(--ion-color-background);
   height: auto;
 
   table {

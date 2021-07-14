@@ -5,6 +5,8 @@
   <ion-button expand="block" mode="ios" slot="end" color="light" size="large" class="ion-margin-horizontal" *ngIf="menu.filters">
     <ion-icon [name]="menu.filters + '-outline'"></ion-icon>
   </ion-button>
+  <!--change-->
+  <ion-toggle color="primary" slot="end" mode="ios" class="ion-padding-top" (ionChange)="toggleTheme($event)"></ion-toggle>
   <!--notifications-->
   <ion-button expand="block" mode="ios" slot="end" color="light" size="large" class="ion-margin-horizontal">
     <ion-icon name="notifications-outline"></ion-icon>

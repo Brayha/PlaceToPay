@@ -11,7 +11,7 @@
     <tr [ngClass]="merchant.lineClass" *ngFor="let merchant of merchants" (click)="detailMerchant()">
       <!--Nombre del comercio-->
       <td>
-        <ion-item lines="none" class="ion-no-padding">
+        <ion-item lines="none" class="ion-no-padding name-merchant">
           <ion-avatar slot="start">
             <img [src]="merchant.imgMerchant">
           </ion-avatar>

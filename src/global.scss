@@ -71,6 +71,16 @@ ion-content {
   }
 }
 
+.header-style {
+  border-bottom: 2px solid var(--ion-color-medium);
+}
+
+.contain-data {
+  background-color: var(--ion-color-background) !important;
+  --background: var(--ion-color-background) !important;
+  background: var(--ion-color-background) !important;
+}
+
 .sc-ion-modal-ios-h { 
     --height: 100% !important;
 }
@@ -90,4 +100,14 @@ ion-content {
 
 .toast-alert {
   font-weight: 600;
+}
+
+.sc-ion-modal-ios-h {
+  --backdrop-opacity: 0.6 !important;
+  backdrop-filter: blur(3px);
+}
+
+.sc-ion-alert-ios {
+  --backdrop-opacity: 0.6 !important;
+  backdrop-filter: blur(3px);
 }
